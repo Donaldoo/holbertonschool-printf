@@ -29,6 +29,6 @@ int print_string(va_list arg)
 		str = "(NULL)";
 
 	for (i = 0; str[i]; i++)
-		_putchar(str);
-	return(1);
+		_putchar(str[i]);
+	return (1);
 }
