@@ -14,4 +14,16 @@ int print_string(va_list arg);
 int print_int(va_list arg);
 int print_float(va_list arg);
 
+/**
+ * Struct format - Entry point
+ * @symbol: elements
+ * @f: function
+ */
+
+typedef struct format
+{
+	char *symbol;
+	void (*f)(va_list arg);
+} format_t;
+
 #endif
