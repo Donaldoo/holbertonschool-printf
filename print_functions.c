@@ -32,3 +32,26 @@ int print_string(va_list arg)
 		_putchar(str[i]);
 	return (1);
 }
+
+/**
+ *
+ *
+ *
+ */
+
+int print_int(va_list arg)
+{
+	int n = va_arg(arg, int);
+	int remainder;
+
+	while (n > 0)
+	{
+		remainder = n % 10;
+		n = n / 10;
+	}
+
+
+
+
+
+

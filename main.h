@@ -13,6 +13,7 @@ int print_char(va_list arg);
 int print_string(va_list arg);
 int print_int(va_list arg);
 int print_float(va_list arg);
+int _printf(const char *format, ...)
 
 /**
  * Struct format - Entry point
