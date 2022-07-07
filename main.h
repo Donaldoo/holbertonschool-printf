@@ -23,7 +23,7 @@ int _printf(const char *format, ...);
 typedef struct print
 {
 	char *symbol;
-	int (*f)();
+	int (*f)(va_list arg);
 } print_t;
 
 #endif
