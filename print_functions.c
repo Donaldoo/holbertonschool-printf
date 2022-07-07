@@ -43,25 +43,23 @@ int print_int(va_list arg)
 {
 	int i = 0;
 	int arr[100];
-	int index = 0;
 	int len = va_arg(arg, int);
 
-	while (len < 9)
-	{
-		arr[index] = len % 10;
-		index++;
-		len = (len / 10);
-	}
-	arr[index] = len;
-	while (arr[i] !='\0')
-		i++;
-
-	if (n < 0)
+	if (len < 0)
 	{
 		_putchar('-');
-		len = -len;
+		len *= -1;
 	}
-	return (i);
+
+	for (i = 0; i < 100 && len != 0; i++)
+	{
+		arr[i] = len % 10;
+		len = len / 10;
+	}
+	for ( ; i >= 0; i--)
+		_putchar(arr[i] + '0');
+
+	return (len);
 }
 
 
