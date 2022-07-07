@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int i, j, flag = 0, len = 0;
+	int i, j, flag, len = 0;
 
 	print_t print[] = {
 		{"c", print_char}, {"s", print_string}, {"d", print_int}, {"i", print_int},
@@ -20,14 +20,14 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (0);
 	i = 0;
-	while (format != NULL && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0;
+			j = 0; flag = 0;
 			while (print[j].symbol != NULL)
 			{
-				if (format[i + 1] == print[j].symbol[0])
+				if (format[i + 1] == *print[j].symbol)
 				{
 					len = len + print[j].f(arg);
 					i++;
