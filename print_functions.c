@@ -39,28 +39,12 @@ int print_string(va_list arg)
  * Return: 1
  */
 
-int print_int(va_list arg)
+int print_int(__attribute__((unused))va_list arg)
 {
-	int i = 0;
-	int arr[100];
-	int len = va_arg(arg, int);
-
-	if (len < 0)
-	{
-		_putchar('-');
-		len *= -1;
-	}
-
-	for (i = 0; i < 100 && len != 0; i++)
-	{
-		arr[i] = len % 10;
-		len = len / 10;
-	}
-	for ( ; i >= 0; i--)
-		_putchar(arr[i] + '0');
-
-	return (len);
+	return (0);
 }
+
+
 
 
 

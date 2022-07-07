@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", print_int},
 		{"f", print_float},
-		{'\0', NULL}
+		{NULL, NULL}
 	};
 	va_start(arg, format);
 	
@@ -28,12 +28,12 @@ int _printf(const char *format, ...)
 	
 	i = 0;
 
-	while (format[i])
+	while (format != NULL && format[i])
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
-			while (print[j].f != NULL)
+			while (print[j].symbol != NULL)
 			{
 				if (format[i + 1] == print[j].symbol[0])
 				{
@@ -54,8 +54,8 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format [i + 1] == '%')
 		{
 			_putchar('%');
-			len++;
 			i++;
+			len++;
 		}
 		else
 		{
