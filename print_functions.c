@@ -42,7 +42,21 @@ int print_string(va_list arg)
 int print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
-	
+	int i = 0;
+	int arr[100];
+	int index = 0;
+	int len = va_arg(arg, int);
+
+	while (len < 9)
+	{
+		arr[index] = len % 10;
+		index++;
+		len = (len / 10);
+	}
+	arr[index] = len;
+	while (arr[i] !='\0')
+		i++;
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -51,7 +65,7 @@ int print_int(va_list arg)
 	if (n / 10 > 0)
 		print_int(n/10);
 	_putchar(n % 10 + '0');
-	return (1);
+	return (i);
 }
 
 
