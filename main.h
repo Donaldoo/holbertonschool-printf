@@ -13,8 +13,7 @@ int print_char(va_list arg);
 int print_string(va_list arg);
 int print_int(va_list arg);
 int print_float(va_list arg);
-int _printf(const char *format, ...)
-int(*func_p(const char f))(va_list arg);
+int _printf(const char *format, ...);
 /**
  * Struct format - Entry point
  * @symbol: elements
@@ -24,7 +23,7 @@ int(*func_p(const char f))(va_list arg);
 typedef struct print
 {
 	char *symbol;
-	void (*f)(va_list arg);
+	int (*f)(va_list arg);
 } print_t;
 
 #endif
