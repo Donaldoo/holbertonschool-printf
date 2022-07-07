@@ -24,34 +24,26 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0; flag = 0;
+			j = 0, flag = 0;
 			while (print[j].symbol != NULL)
 			{
 				if (format[i + 1] == *print[j].symbol)
-				{
-					len = len + print[j].f(arg);
-					i++;
-					flag = 1;
-				}
+					len = len + print[j].f(arg), i++, flag = 1;
 				j++;
 			}
 			if (flag == 0)
 			{
-				_putchar(format[i]);
-				len+=1;
+				_putchar(format[i]), len += 1;
 			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
-			len+=1;
+			len += 1;
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			len+=1;
-		}
+			_putchar(format[i]), len += 1;
 		i++;
 	}
 	va_end(arg);
