@@ -19,17 +19,22 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (0);
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			for (j = 0; print[j].symbol != NULL; j++)
+			j = 0;
+			while (print[j].symbol != NULL)
+			{
 				if (format[i + 1] == print[j].symbol[0])
 				{
 					len = len + print[j].f(arg);
 					i++;
 					flag = 1;
 				}
+				j++;
+			}
 			if (flag == 0)
 			{
 				_putchar(format[i]);
@@ -43,8 +48,11 @@ int _printf(const char *format, ...)
 			len+=1;
 		}
 		else
+		{
 			_putchar(format[i]);
-		len+=1;
+			len+=1;
+		}
+		i++;
 	}
 	va_end(arg);
 	return (len);
