@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	int i, j, flag = 0, len = 0;
 
 	print_t print[] = {
-		{"c", print_char}, {"s", print_string}, {"d", print_int}, {"f", print_float},
+		{"c", print_char}, {"s", print_string}, {"d", print_int}, {"i", print_int},
 		{NULL, NULL}
 	};
 	va_start(arg, format);
