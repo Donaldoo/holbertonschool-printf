@@ -38,33 +38,47 @@ int print_string(va_list arg)
 /**
  * print_int - Function to print numbers
  * @arg: list of arguments
- * Return: len
+ * Return: i
  */
 
-int print_int(__attribute__((unused))va_list arg)
+int print_int(va_list arg)
 {
-	int n, i = 1, len = 0;
-	unsigned int nr;
+	int i = 1, len = 0;
+	unsigned int nr = 0;
 
-	n = va_arg(arg, int);
+	nr = va_arg(arg, int);
+	len = nr;
 
-	if (n < 0)
+	if (len < 0)
 	{
 		_putchar('-');
-		nr = n * (-1);
-		len++;
+		len = len * (-1);
+		nr = len;
+		i += 1;
 	}
-	else
-		nr = n;
-	while (nr / i > 9)
-		i *= 10;
-	while (i != 0)
+
+	while (nr > 9)
 	{
-		len += _putchar(nr / i + '0');
-		nr = nr % i;
-		i /= 10;
+		nr = nr / 10;
+		i++;
 	}
-	return (len);
+	_recursion_int(len);
+	return (i);
+}
+
+/**
+ * _reccursion_int - function to print an int
+ * @i: intiger
+ *
+ * Return: no return
+ */
+void _recursion_int(int i)
+{
+	unsigned int n;
+	n = i;
+	if (n / 10)
+		_recursion_int(n / 10);
+	_putchar(n % 10 + '0');
 }
 
 
