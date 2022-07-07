@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdlib.h>
 /**
  *
  *
@@ -17,6 +19,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", print_int},
 		{"f", print_float},
+		{NULL, NULL}
 	};
 	va_start(arg, format);
 	
@@ -30,19 +33,38 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			j = 0;
-			while (
+			while (print[j].f != NULL)
+			{
+				if (format[i + 1] == print[j].symbol[0])
+				{
+					len += print[j].f(arg);
+					i++;
+					flag = 1;
+				}
+				j++;
+			}
+			if (flag == 0)
+			{
+				_putchar(format[i]);
+				len++;
+			}
+
 
 		}
-		if (format[i] == '%' && format [i + 1] == '%')
+		else if (format[i] == '%' && format [i + 1] == '%')
 		{
 			_putchar('%');
 			len++;
 			i++;
 		}
-		else if (format[i])
+		else
 		{
 			_putchar(format[i]);
 			len++;
 		}
 		i++;
 	}
+
+	va_end(arg);
+	return (len);
+}

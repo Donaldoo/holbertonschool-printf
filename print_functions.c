@@ -25,7 +25,7 @@ int print_string(va_list arg)
 
 	str = va_arg(arg, char *);
 
-	if (str = NULL)
+	if (str == NULL)
 		str = "(NULL)";
 
 	for (i = 0; str[i]; i++)
@@ -39,9 +39,9 @@ int print_string(va_list arg)
  * Return: 1
  */
 
-int print_int(va_list arg)
+int print_int(__attribute__((unused))va_list arg)
 {
-	int n = va_arg(arg, int);
+	/**
 	int i = 0;
 	int arr[100];
 	int index = 0;
@@ -60,13 +60,16 @@ int print_int(va_list arg)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		len = -len;
 	}
 	return (i);
+	**/
+	return (0);
 }
 
 
 
-
-
-
+int print_float(__attribute__((unused))va_list arg)
+{
+	return (0);
+}
