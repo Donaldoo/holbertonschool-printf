@@ -2,69 +2,47 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
- *
- *
- *
+ * _printf - entry point
+ * @format: arg
+ * Return: len
  */
 
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	unsigned int i, j;
-	unsigned int flag = 0;
-	unsigned int len = 0;
+	int i, j, flag = 0, len = 0;
 
 	print_t print[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"d", print_int},
-		{"f", print_float},
+		{"c", print_char}, {"s", print_string}, {"d", print_int}, {"f", print_float},
 		{NULL, NULL}
 	};
 	va_start(arg, format);
-	
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (0);
-	
-	i = 0;
-
-	while (format != NULL && format[i] != '\0')
+	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0;
-			while (print[j].symbol != NULL)
-			{
+			for (j = 0; print[j].symbol != NULL; j++)
 				if (format[i + 1] == print[j].symbol[0])
 				{
 					len = len + print[j].f(arg);
 					i++;
 					flag = 1;
 				}
-				j++;
-			}
 			if (flag == 0)
 			{
-				_putchar(format[i]);
-				len++;
+				_putchar(format[i]), len++;
 			}
-
-
 		}
-		else if (format[i] == '%' && format [i + 1] == '%')
+		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
-			i++;
-			len++;
+			i++, len++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			len++;
-		}
-		i++;
+			_putchar(format[i]), len++;
 	}
-
 	va_end(arg);
 	return (len);
 }
