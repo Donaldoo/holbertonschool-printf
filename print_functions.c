@@ -16,7 +16,7 @@ int print_char(va_list arg)
 /**
  * print_string - Function to print characters of a string
  * @arg: list of arguments
- * Return: 1
+ * Return: (i)
  */
 int print_string(va_list arg)
 {
@@ -30,7 +30,7 @@ int print_string(va_list arg)
 
 	for (i = 0; str[i]; i++)
 		_putchar(str[i]);
-	return (1);
+	return (i);
 }
 
 /**
