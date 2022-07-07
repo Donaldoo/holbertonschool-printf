@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", print_int},
 		{"f", print_float},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 	va_start(arg, format);
 	
