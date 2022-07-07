@@ -39,9 +39,8 @@ int print_string(va_list arg)
  * Return: 1
  */
 
-int print_int(__attribute__((unused))va_list arg)
+int print_int(va_list arg)
 {
-	/**
 	int i = 0;
 	int arr[100];
 	int index = 0;
@@ -63,8 +62,6 @@ int print_int(__attribute__((unused))va_list arg)
 		len = -len;
 	}
 	return (i);
-	**/
-	return (0);
 }
 
 
