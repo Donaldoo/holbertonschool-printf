@@ -8,52 +8,41 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	unsigned int c = 0;
-	char_nr = 0;
+	unsigned int i, j;
+	unsigned int flag = 0;
+	unsigned int len = 0;
 
-	if (!format)
-		return (-1);
-	 va_start(arg, format);
-	 for (i = 0; format[c] != '\0'; i++)
-	 {
-		 if (format[c] =='%')
-		 { 
-			 if (format[c + 1] == '\0')
-				 return (-1);
-			 else if (format[c + 1] == '%')
-			 {
-				 _putchar('%');
-				 char_nr++;
-				 i++;
-			 }
-
-	format_t formats[] = {
+	print_t print[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"d", print_int},
 		{"f", print_float},
-		{NULL, NULL}
 	};
-	int i, j;
-	char *sep;
-
-	i = 0;
-	sep = "";
-
 	va_start(arg, format);
-	while (format && format[i] != '\0')
+	
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (0);
+	
+	i = 0;
+
+	while (format[i])
 	{
-		j = 0;
-		while (j < 4 && (*(format + i) != *(formats[j].symbol)))
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j++;
-		}
+			j = 0;
+			while (
 
-		if (j < 4)
+		}
+		if (format[i] == '%' && format [i + 1] == '%')
 		{
-		/**
-		 * to be continued
-		 */
+			_putchar('%');
+			len++;
+			i++;
 		}
-		
-
+		else if (format[i])
+		{
+			_putchar(format[i]);
+			len++;
+		}
+		i++;
+	}
