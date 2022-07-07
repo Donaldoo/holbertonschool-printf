@@ -32,16 +32,16 @@ int _printf(const char *format, ...)
 				}
 			if (flag == 0)
 			{
-				_putchar(format[i]), len++;
+				_putchar(format[i]), len+1;
 			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
-			i++, len++;
+			i++, len+1;
 		}
 		else
-			_putchar(format[i]), len++;
+			_putchar(format[i]), len+1;
 	}
 	va_end(arg);
 	return (len);
