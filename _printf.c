@@ -28,7 +28,6 @@ int _printf(const char *format, ...)
 			while (print[j].symbol != NULL)
 			{
 				if (format[i + 1] == *print[j].symbol)
-				{
 					len = len + print[j].f(arg), i++, flag = 1;
 				j++;
 			}
@@ -44,10 +43,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			len += 1;
-		}
+			_putchar(format[i]), len += 1;
 		i++;
 	}
 	va_end(arg);
