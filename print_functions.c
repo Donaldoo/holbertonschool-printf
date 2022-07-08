@@ -80,26 +80,3 @@ void _recursion_int(int i)
 	_putchar(n % 10 + '0');
 }
 
-/**
-int print_int(va_list arg)
-{
-	unsigned int num;
-	unsigned int exp;
-	unsigned int digit;
-	unsigned int last;
-
-	if (num > 0)
-		while (num > 0)
-		{
-			exp *= 10;
-			num /= 10;
-		}
-	while (exp > 0)
-	{
-		digit = num / exp;
-		_putchar(digit);
-		num = num - (digit * exp);
-		exp = exp / 10;
-		_putchar(last);
-	}
-}*/
