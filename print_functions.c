@@ -41,7 +41,7 @@ int print_string(va_list arg)
  * Return: i
  */
 
-/**int print_int(va_list arg)
+int print_int(va_list arg)
 {
 	int i = 1, len = 0;
 	unsigned int nr = 0;
@@ -64,13 +64,13 @@ int print_string(va_list arg)
 	}
 	_recursion_int(len);
 	return (i);
-}*/
+}
 
 /**
  * _recursion_int - function to print an int
  * @i: intiger
  */
-/**void _recursion_int(int i)
+void _recursion_int(int i)
 {
 	unsigned int n;
 
@@ -78,8 +78,9 @@ int print_string(va_list arg)
 	if (n / 10)
 		_recursion_int(n / 10);
 	_putchar(n % 10 + '0');
-}*/
+}
 
+/**
 int print_int(va_list arg)
 {
 	unsigned int num;
@@ -101,4 +102,4 @@ int print_int(va_list arg)
 		exp = exp / 10;
 		_putchar(last);
 	}
-}
+}*/
