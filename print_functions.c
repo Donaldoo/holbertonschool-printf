@@ -106,7 +106,7 @@ int print_rot13(va_list arg)
 				_putchar(s[length]);
 				break;
 			}
-			else if (alphabet[index + 1] == '\0')
+			else if (alphabet[index] == '\0')
 			{
 				_putchar(s[length]);
 			}
