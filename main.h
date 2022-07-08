@@ -14,6 +14,7 @@ int print_string(va_list arg);
 int print_int(va_list arg);
 void _recursion_int(int i);
 int print_float(va_list arg);
+int print_rot13(va_list arg);
 int _printf(const char *format, ...);
 /**
  * Struct format - Entry point

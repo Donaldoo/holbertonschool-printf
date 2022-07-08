@@ -15,7 +15,7 @@ int print_char(va_list arg)
 }
 
 /**
- * print_string - Function to print characters of a string
+ * print_string - Function to print a string
  * @arg: list of arguments
  * Return: (i)
  */
@@ -79,4 +79,54 @@ void _recursion_int(int i)
 		_recursion_int(n / 10);
 	_putchar(n % 10 + '0');
 }
+
+
+/**
+ * print_R - prints rot13'ed string
+ * @arg: List of arguments
+ * Return: string length
+ */
+int print_rot13(va_list arg)
+{
+	int index, length = 0, len_count = 0;
+	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *s = va_arg(arg, char *);
+
+	while (s[length])
+	{
+		for (index = 0; index < 52; index++)
+		{
+			if (s[length] == alphabet[index])
+			{
+				s[length] = rot13[index];
+				_putchar(s[length]);
+				len_count++;
+				break;
+			}
+		}
+		length++;
+	}
+	return (len_count);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
