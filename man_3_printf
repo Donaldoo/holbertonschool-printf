@@ -1,4 +1,4 @@
-.TH "11 11 11 11 11 11 11 11 11 11 11 July 2022" "0.10" "_printf() man page"
+.TH "11 July 2022" "0.10" "_printf() man page"
 
 .Sh NAME
 .B _printf
@@ -6,8 +6,8 @@
 
 .SH SYNOPSIS
 .B _printf
-.RB {| #include "main.h" |}
-.RB [| int _printf(const char *format, ...) |]
+.RB #include "main.h"
+.RB int _printf(const char *format, ...) 
 
 .SH DESCRIPTION
 .B _printf
@@ -24,9 +24,8 @@ This script can perform all these tasks and must be executed as root user. More 
 
 int main(void)
 .TP
-{
+{_printf("%s, %d, %c\\n", Name, Age, Gender);. _printf used to print elements of different types.
 .IP
-_printf("%s, %d, %c\\n", Name, Age, Gender);. _printf used to print elements of different types.
 .SH SEE ALSO
 .I printf(3)
 
@@ -34,12 +33,11 @@ T.H FLAG CHARACTERS
 The character % is followed by zero or other flag characters
 
 .SH OBJECT
-.TP
 .B Upon successful return, the function returns the number of characters printed (excluding the null byte used to end output to strings).
   If an output error is encountered, a negative value is returned.
 
 T.H BUGS
-.TP Code such as _printf(foo); often indicates a bug, since foo may contain a % character.  If foo comes from untrusted user input,it may contain %n, causing the _printf() call to write to memory and creating a security hole.
+Code such as _printf(foo); often indicates a bug, since foo may contain a % character.  If foo comes from untrusted user input,it may contain %n, causing the _printf() call to write to memory and creating a security hole.
 
 .IP "fB-h|--helpfP"
 Prints help
