@@ -93,6 +93,9 @@ int print_rot13(va_list arg)
 	char rot13[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *s = va_arg(arg, char *);
 
+	if (s == NULL)
+		return (-1);
+
 	while (s[length])
 	{
 		for (index = 0; index < 52; index++)
@@ -100,9 +103,14 @@ int print_rot13(va_list arg)
 			if (s[length] == alphabet[index])
 			{
 				s[length] = rot13[index];
+				len_count++;
+				_putchar(s[length]);
+				break;
+			}
+			else
+			{
 				_putchar(s[length]);
 				len_count++;
-				break;
 			}
 		}
 		length++;
