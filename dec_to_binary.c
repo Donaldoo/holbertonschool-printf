@@ -22,7 +22,7 @@
 	}
 	return (s);
 }**/
-
+/**
 char *reverse_string(char *s)
 {
         int i = 0;
@@ -34,6 +34,7 @@ char *reverse_string(char *s)
         }
         return (0);
 }
+*/
 
 
 /**
@@ -43,16 +44,36 @@ char *reverse_string(char *s)
  */
 int dec_binary(va_list arg)
 {
-    unsigned int i, length;
-    unsigned int num;
-    char *binNum;
-    char *rev;
+    unsigned int num = va_arg(arg, unsigned int);
+    int length = 0, index = 0;
+    unsigned int arr[31];
 
-    num = va_arg(arg, int);
     if (num == 0)
-        return(_putchar('0'));
+    {
+	    (_putchar('0'));
+	    length++;
+    }
+    else
+    {
+	    while (num != 0)
+	    {
+		    arr[index] = (num % 2);
+		    num /= 2;
+		    index++;
+	    }
+	    index--;
+	    while (index >= 0)
+	    {
+		    _putchar(arr[index] + '0');
+		    index--;
+		    length++;
+	    }
+    }
+    return (length);
+}
+
         
-    if (num < 1)
+/**     (num < 1)
         return (-1);
     
     for (i = 0; num > 0; i++)
@@ -84,4 +105,4 @@ int dec_binary(va_list arg)
     
     return (length);
     
-}
+}*/
