@@ -44,7 +44,7 @@ int dec_binary(va_list arg)
     
     for (i = 0; num > 0; i++)
     {
-        num = num / 2;
+        num = num / 2 * 2;
         length++;
     }
     
