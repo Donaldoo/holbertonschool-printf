@@ -20,7 +20,7 @@ int rev_str(va_list arg);
 int dec_binary(va_list arg);
 int recursion_rev(char *str);
 int print_hexadecimal(va_list arg);
-/** char *reverse_string(char *s);*/
+int print_Upper_hex(va_list arg);
 int _printf(const char *format, ...);
 
 
