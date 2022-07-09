@@ -6,7 +6,7 @@
  */
 int dec_binary(va_list arg)
 {
-	int n, i, j, length;
+	int n, i = 0, j, length, index = 0;
 	int binNum[50];
 
 	n = va_arg(arg, int);
@@ -19,8 +19,9 @@ int dec_binary(va_list arg)
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(binNum[j]);
+		_putchar(binNum[index++]);
 	}
+
 	length = 0;
 	while(binNum[length])
 		length++;
