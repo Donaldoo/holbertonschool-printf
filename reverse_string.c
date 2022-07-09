@@ -6,10 +6,14 @@
  */
 int rev_str(va_list arg)
 {
+	int len;
 	char *str;
 
 	str = va_arg(arg, char *);
-	return (recursion_rev(str));
+	len = _strlen(str);
+	recursion_rev(str);
+
+	return (len);
 }
 
 /**
