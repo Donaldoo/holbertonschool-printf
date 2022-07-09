@@ -19,6 +19,7 @@ int dec_binay(va_list arg);
 int rev_str(va_list arg);
 int dec_binary(va_list arg);
 int recursion_rev(char *str);
+char *reverse_string(char *s);
 int _printf(const char *format, ...);
 
 
