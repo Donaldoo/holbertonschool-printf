@@ -22,12 +22,15 @@ int print_rot13(va_list arg)
 			if (s[length] == alphabet[index])
 			{
 				s[length] = rot13[index];
-				_putchar(s[length]);
 				break;
 			}
 			else if (alphabet[index] == '\0')
-				_putchar(s[length]);
+				s[length] = s[length];
 		}
 	}
+
+	for (length = 0; s[length]; length++)
+		_putchar(s[length]);
+
 	return (length);
 }
