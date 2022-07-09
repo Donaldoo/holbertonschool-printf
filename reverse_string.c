@@ -9,10 +9,7 @@ int rev_str(va_list arg)
 	char *str;
 
 	str = va_arg(arg, char *);
-
-	recursion_rev(str);
-
-	return (0);
+	return (recursion_rev(str));
 }
 
 /**
