@@ -13,7 +13,7 @@ int print_rot13(va_list arg)
 	char *s = va_arg(arg, char *);
 
 	if (s == NULL)
-		s = "(null)";
+		return (-1);
 	
 	for (length = 0; s[length]; length++)
 	{
@@ -24,8 +24,6 @@ int print_rot13(va_list arg)
 				s[length] = rot13[index];
 				break;
 			}
-			else if (alphabet[index] == '\0')
-				s[length] = s[length];
 		}
 	}
 
