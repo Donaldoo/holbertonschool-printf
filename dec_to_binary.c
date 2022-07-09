@@ -30,7 +30,7 @@ char *reverse_string(char *s)
  */
 int dec_binary(va_list arg)
 {
-    int i, length;
+    unsigned int i, length;
     unsigned int num;
     char *binNum;
     char *rev;
