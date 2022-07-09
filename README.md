@@ -7,7 +7,7 @@ This function is similar with [printf](https://man7.org/linux/man-pages/man3/pri
 
 <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://files.slack.com/files-pri/T01BXJ5C1PT-F03NW154K6G/my_first_board.jpg" width="400" height="300">
 
-#### C language standard functions used
+## C language standard functions used
 
 * ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``
 
@@ -49,6 +49,7 @@ int main()
       return (0);
 } 
 ```
+
 **File name** | **Description**
 ---- | ----
 **[main.h](https://github.com/Donaldoo/holbertonschool-printf/blob/main/main.h)** | Header file conatins all the prototypes & the structure used in this project.
