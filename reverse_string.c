@@ -33,10 +33,3 @@ int recursion_rev(char *str)
 	}
 	return (0);
 }
-
-
-
-
-
-
-

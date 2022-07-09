@@ -23,7 +23,7 @@ int print_rot13(va_list arg)
 
 	for (index = 0; s[index]; index++)
 		s_cpy[index] = s[index];
-	
+
 	for (length = 0; s_cpy[length]; length++)
 	{
 		for (index = 0; index < 52; index++)
