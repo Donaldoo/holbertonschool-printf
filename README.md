@@ -1,6 +1,6 @@
                                          # _printf Function
 
-***The _printf function is created as part of _printf project for Holberton School. This Repo has has all the code for our (Donaldoo II & tizihoxha's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate some of the processess of the C function printf().***
+***The _printf function is created as part of _printf project for Holberton School. This Repo has has all the code for our (Donaldoo & tizihoxha's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate some of the processess of the C function printf().***
 <img img align="center" width="400" height="400" src="https://app.slack.com/client/T02BUAW9Y5N/D03GTHSR3V2">
 (This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
 
@@ -55,3 +55,8 @@ int main()
 **[_putchar](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_putchar.c)** | Function used to print only one character.
 **[print_functions.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/print_functions.c)** | File containing functions to print variable format `char`, `string` & `int` using only `_putchar`.
 **[_printf.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_printf.c)** | File contains structure initialised with values and checks format entered from stdio.
+
+#### Authors
+
+Tiziana Hoxha - https://github.com/tizihoxha
+Donaldo Kumaraku - https://github.com/Donaldoo
