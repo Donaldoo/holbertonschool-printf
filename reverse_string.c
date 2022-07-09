@@ -10,7 +10,7 @@ int rev_str(va_list arg)
 	char *str;
 	char *rev;	
 
-	str = va_arg(arg, char *)
+	str = va_arg(arg, char *);
 	if (str == NULL)
 		str = "(null)";
 
