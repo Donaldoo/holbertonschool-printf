@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_R - prints rot13'ed string
  * @arg: List of arguments
@@ -13,7 +15,7 @@ int print_rot13(va_list arg)
 	if (s == NULL)
 		s = "(null)";
 	
-	for (length = 0, s[length], length++)
+	for (length = 0; s[length]; length++)
 	{
 		for (index = 0; index < 52; index++)
 		{
@@ -26,5 +28,6 @@ int print_rot13(va_list arg)
 			else if (alphabet[index] == '\0')
 				_putchar(s[length]);
 		}
-		return (length);
+	}
+	return (length);
 }
