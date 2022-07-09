@@ -19,7 +19,7 @@ int dec_binary(va_list arg)
 	}
 	for (j = i - 1; j >= 0; j--)
 	{
-		_putchar(binNum[j--]);
+		_putchar(binNum[j]);
 	}
 	length = 0;
 	while(binNum[length])
