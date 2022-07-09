@@ -14,6 +14,8 @@ int print_rot13(va_list arg)
 
 	if (s == NULL)
 		return (-1);
+
+	length = _strlen(s);
 	
 	for (length = 0; s[length]; length++)
 	{
