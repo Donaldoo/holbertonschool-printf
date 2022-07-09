@@ -2,16 +2,15 @@
 ***The _printf function is created as part of _printf project for Holberton School. This Repo has has all the code for our (Donaldoo II & tizihoxha's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate some of the processess of the C function printf().***
 <img img align="center" width="400" height="400" src="https://app.slack.com/client/T02BUAW9Y5N/D03GTHSR3V2">
 (This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
+
 #### C language standard functions used
 
 * ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``
 ​
+
 <img align="center" width="400" height="400" src="https://app.slack.com/client/T02BUAW9Y5N/D03GTHSR3V2">
 
 (This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
-#### C language standard functions used
-rs, such as new lines ('\n'), backspaces ('\b') and tabspaces ('\t').
-​
 
 Variables format | Description
 --- | ---
