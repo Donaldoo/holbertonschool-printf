@@ -7,18 +7,12 @@
 
 int print_hexadecimal(va_list arg)
 {
-	long unsigned int num;
+	long unsigned int num = va_arg(arg, long int);
 	int hexNum[50];
 	int index, j, length = 0;
 	char hex[] = "0123456789abcdef";
 	int dec[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
-	if (num < 0)
-	{
-		_putchar('-');
-		length++;
-		num *= -1;
-	}
 	if (num == 0)
 	{
 		_putchar('0');
