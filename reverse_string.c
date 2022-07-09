@@ -8,17 +8,19 @@ int rev_str(va_list arg)
 {
 	int index, rev_index, length;
 	char *str;
-	char *rev;
+	char *rev;	
 
-
-	str = va_arg(arg, char *);
+	str = va_arg(arg, char *)
 	if (str == NULL)
 		str = "(null)";
+
 	length = _strlen(str);
+
 	rev = malloc(1 + sizeof(char) * length);
 	if (rev == NULL)
-		rev = "NULL";
-	for (index = length; index >= 0; index--)
+		rev = (NULL);
+
+	for (index = length - 1; index >= 0; index--)
 	{
 		rev[rev_index] = str[index];
 		_putchar(rev[rev_index]);
