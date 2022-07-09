@@ -7,7 +7,6 @@
 /**
  * Prototypes of cunctions used in this project
  */
-
 int _putchar(char c);
 int print_char(va_list arg);
 int print_string(va_list arg);
@@ -16,15 +15,16 @@ void _recursion_int(int i);
 int print_float(va_list arg);
 int print_rot13(va_list arg);
 int _strlen(char *s);
-char rev_str(va_list arg);
-int recursion_rev(char *str);
+int rev_str(va_list arg);
+void recursion_rev(char *str);
 int _printf(const char *format, ...);
+
+
 /**
  * Struct format - Entry point
  * @symbol: elements
  * @f: function
  */
-
 typedef struct print
 {
 	char *symbol;

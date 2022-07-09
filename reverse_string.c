@@ -4,12 +4,15 @@
  * @arg: argument count
  * Return: rev
  */
-char rev_str(va_list arg)
+int rev_str(va_list arg)
 {
 	char *str;
 
 	str = va_arg(arg, char *);
-	return (recursion_rev(str));
+
+	recursion_rev(str);
+
+	return (0);
 }
 
 /**
@@ -18,16 +21,15 @@ char rev_str(va_list arg)
  * Return: 0
  */
 
-int recursion_rev(char *str)
+void recursion_rev(char *str)
 {
 	int i = 0;
 
 	if (*str != '\0')
 	{
-		rev_str(str[0] + 1);
+		recursion_rev(str + 1);
 		_putchar(str[i++]);
 	}
-	return (0);
 }
 
 
