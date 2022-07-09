@@ -18,7 +18,7 @@ int rev_str(va_list arg)
  * Return: 0
  */
 
-void recursion_rev(char *str)
+int recursion_rev(char *str)
 {
 	int i = 0;
 
@@ -27,6 +27,7 @@ void recursion_rev(char *str)
 		recursion_rev(str + 1);
 		_putchar(str[i++]);
 	}
+	return (0);
 }
 
 

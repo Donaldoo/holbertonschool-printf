@@ -16,7 +16,7 @@ int print_float(va_list arg);
 int print_rot13(va_list arg);
 int _strlen(char *s);
 int rev_str(va_list arg);
-void recursion_rev(char *str);
+int recursion_rev(char *str);
 int _printf(const char *format, ...);
 
 
