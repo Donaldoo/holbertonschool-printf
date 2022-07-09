@@ -5,7 +5,7 @@
 This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).
 
 
-<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="file:///C:/Users/User/Desktop/readmeimg.jpg" width="730" height="300">
+<img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://prnt.sc/uNQhoxARTcRn" width="730" height="300">
 
 ## C language standard functions used
 
