@@ -6,9 +6,10 @@
 #### C language standard functions used
 
 * ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``
+
 ​
 
-<img align="center" width="400" height="400" src="https://app.slack.com/client/T02BUAW9Y5N/D03GTHSR3V2">
+<img src="https://files.slack.com/files-pri/T01BXJ5C1PT-F03NW154K6G/my_first_board.jpg">
 
 (This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
 
