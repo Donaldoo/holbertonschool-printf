@@ -2,7 +2,7 @@
 
 ***The _printf function is created as part of _printf project for Holberton School. This Repo has has all the code for our (Donaldoo & tizihoxha's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate some of the processess of the C function printf().***
 
-(This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
+This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).
 
 
 <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://files.slack.com/files-pri/T01BXJ5C1PT-F03NW154K6G/my_first_board.jpg" width="400" height="300">
