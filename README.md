@@ -5,7 +5,7 @@
 This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).
 
 
-![Flowchart](src="https://prnt.sc/uNQhoxARTcRn)>
+![Flowchart](src="https://prnt.sc/uNQhoxARTcRn)
 
 ## C language standard functions used
 
