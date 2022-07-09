@@ -3,7 +3,7 @@
  *
  *
  */
-char *reverse_string(char *s)
+/**char *reverse_string(char *s)
 {
 	int length, rev;
 	char swapChar;
@@ -21,7 +21,20 @@ char *reverse_string(char *s)
 		rev++;
 	}
 	return (s);
+}**/
+
+char *reverse_string(char *s)
+{
+        int i = 0;
+
+        if (*s != '\0')
+        {
+                recursion_rev(s + 1);
+                _putchar(s[i++]);
+        }
+        return (0);
 }
+
 
 /**
  * dec_binary - Function that coverts decimal numbers to binary
@@ -44,7 +57,7 @@ int dec_binary(va_list arg)
     
     for (i = 0; num > 0; i++)
     {
-        num = num / 2 * 2;
+        num = num / 2;
         length++;
     }
     
