@@ -61,7 +61,7 @@ int dec_binary(va_list arg)
 		    num /= 2;
 		    index++;
 	    }
-	    index = 0;
+	    index--;
 	    while (index >= 0)
 	    {
 		    _putchar(arr[index] + '0');
