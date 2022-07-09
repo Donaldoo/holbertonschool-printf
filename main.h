@@ -15,7 +15,9 @@ void _recursion_int(int i);
 int print_float(va_list arg);
 int print_rot13(va_list arg);
 int _strlen(char *s);
+int dec_binay(va_list arg);
 int rev_str(va_list arg);
+int dec_binary(va_list arg);
 int recursion_rev(char *str);
 int _printf(const char *format, ...);
 
