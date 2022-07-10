@@ -40,3 +40,34 @@ int print_octal(va_list arg)
 	}
 	return (length);
 }
+
+/**
+ * print_unsignedint - Function to print positive numbers
+ * @arg: list of arguments
+ * Return: i
+ */
+
+int print_unsignedint(va_list arg)
+{
+        unsigned int i = 1, len = 0;
+        unsigned int nr = 0;
+
+        nr = va_arg(arg, unsigned int);
+        len = nr;
+
+        if (len == 0)
+        {
+                _putchar('-');
+                len = len * (-1);
+                nr = len;
+                i += 1;
+        }
+
+        while (nr > 9)
+        {
+                nr = nr / 10;
+                i++;
+        }
+        _recursion_int(len);
+        return (i);
+}

@@ -19,6 +19,7 @@ int dec_binay(va_list arg);
 int rev_str(va_list arg);
 int dec_binary(va_list arg);
 int recursion_rev(char *str);
+int print_unsignedint(va_list arg);
 int print_octal(va_list arg);
 int print_hexadecimal(va_list arg);
 int print_Upper_hex(va_list arg);
@@ -26,7 +27,7 @@ int _printf(const char *format, ...);
 
 
 /**
- * Struct format - Entry point
+ * Struct print - Entry point
  * @symbol: elements
  * @f: function
  */
