@@ -1,4 +1,4 @@
-# _printf Function
+# _printf Function :page_facing_up:
 
 **The `_printf function` is created as part of _printf project for *Holberton School*. This Repo has all the code for our (Donaldoo & tizihoxha's) custom function called `_printf()`. It is a mini-version of C Language function `printf()` from `stdio.h`, and our function `_printf()` attempts to replicate some of the processess of the C function `printf()`.**
 
