@@ -43,7 +43,7 @@ int print_hexadecimal(va_list arg)
 
 
 /**
- * print_Upper_hexadecimal - function to convert decimal to uppercase hexadecimal
+ * print_Upper_hex - convert decimal to uppercase hexadecimal
  * @arg: list of arguments
  * Return: length
  */
