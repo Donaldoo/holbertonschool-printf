@@ -21,6 +21,8 @@ Format specifier | Description
 %s | Used to print string.
 %d, %i | Used to print integers.
 %R | Used to print Rot13'd string.
+%b | Used to print binary.
+%o | Used to print octal.
 %x | Used to print hexadecimal integer (lowercase).
 %X | Used to print hexadecimal integer (uppercase).
 
@@ -61,6 +63,7 @@ int main()
 **[print_functions.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/print_functions.c)** | File containing functions to print variable format `char`, `string` & `int` using only `_putchar`.
 **[rot13.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/rot13.c)** | File contains function to encode a string to rot13.
 **[dec_to_binary.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/dec_to_binary.c)** | Function to convert decimal numbers to binary.
+**[dec_to_octal.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/dec_to_octal.c)** | File contains functions to convert decimal to octal & handle unsigned int.
 **[dec_to_hexadecimal.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/dec_to_hexadecimal.c)** | Function to convert decimal numbers to hexadecimal (lowercase and uppercase).
 **[_printf.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_printf.c)** | File contains structure initialised with values and checks format entered from stdio.
 
