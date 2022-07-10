@@ -25,8 +25,8 @@ int print_hexadecimal(va_list arg)
 		hexNum[index] = num % 16;
 		num = num / 16;
 	}
-	index--;
-	for ( ; index >= 0; index--)
+
+	for (index -= 1 ; index >= 0; index--)
 	{
 		for (j = 0; j < 17; j++)
 		{

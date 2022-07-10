@@ -23,11 +23,10 @@ int dec_binary(va_list arg)
 			num /= 2;
 			index++;
 		}
-		index -= 1;
-		while (index >= 0)
+
+		for (index -= 1; index >= 0; index--)
 		{
 			_putchar(arr[index] + '0');
-			index--;
 			length++;
 		}
 	}
