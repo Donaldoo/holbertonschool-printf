@@ -10,8 +10,8 @@ int print_octal(va_list arg)
 	unsigned long int num = va_arg(arg, long int);
 	int decNum[100];
 	int index, j, length = 0;
-	char oct[] = "0123456789";
-	int dec[] = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+	char dec[] = "01234567";
+	int oct[] = {0, 1, 2, 3, 4, 5, 6, 7};
 
 	if (num == 0)
 	{
@@ -28,11 +28,11 @@ int print_octal(va_list arg)
 	index--;
 	for ( ; index >= 0; index--)
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; j < 8; j++)
 		{
-			if (decNum[index] == dec[j])
+			if (decNum[index] == oct[j])
 			{
-				_putchar(oct[j]);
+				_putchar(dec[j]);
 				length++;
 				break;
 			}
