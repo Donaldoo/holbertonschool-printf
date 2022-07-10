@@ -58,10 +58,10 @@ int print_unsignedint(va_list arg)
 
         if (len == 0)
         {
-                _putchar('-');
-                len = len * (-1);
-                nr = len;
-                i += 1;
+                _putchar('0');
+                /**len = len * (-1);
+                nr = len;**/
+                i++;
         }
 
         while (nr > 9)
