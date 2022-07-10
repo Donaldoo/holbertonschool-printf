@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_R - prints rot13'ed string
+ * print_rot13 - prints rot13'ed string
  * @arg: List of arguments
  * Return: string length
  */

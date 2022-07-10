@@ -6,30 +6,30 @@
  */
 int dec_binary(va_list arg)
 {
-    unsigned int num = va_arg(arg, unsigned int);
-    int length = 0, index = 0;
-    unsigned int arr[31];
+	unsigned int num = va_arg(arg, unsigned int);
+	int length = 0, index = 0;
+	unsigned int arr[31];
 
-    if (num == 0)
-    {
-	    (_putchar('0'));
-	    length++;
-    }
-    else
-    {
-	    while (num != 0)
-	    {
-		    arr[index] = (num % 2);
-		    num /= 2;
-		    index++;
-	    }
-	    index -= 1;
-	    while (index >= 0)
-	    {
-		    _putchar(arr[index] + '0');
-		    index--;
-		    length++;
-	    }
-    }
-    return (length);
-} 
+	if (num == 0)
+	{
+		(_putchar('0'));
+		length++;
+	}
+	else
+	{
+		while (num != 0)
+		{
+			arr[index] = (num % 2);
+			num /= 2;
+			index++;
+		}
+		index -= 1;
+		while (index >= 0)
+		{
+			_putchar(arr[index] + '0');
+			index--;
+			length++;
+		}
+	}
+	return (length);
+}
