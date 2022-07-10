@@ -1,26 +1,29 @@
 # _printf Function
 
-***The _printf function is created as part of _printf project for Holberton School. This Repo has has all the code for our (Donaldoo & tizihoxha's) custom function called _printf(). It is a mini-version of C Language function printf() from stdio.h, and our function _printf() attempts to replicate some of the processess of the C function printf().***
+**The `_printf function` is created as part of _printf project for *Holberton School*. This Repo has all the code for our (Donaldoo & tizihoxha's) custom function called `_printf()`. It is a mini-version of C Language function `printf()` from `stdio.h`, and our function `_printf()` attempts to replicate some of the processess of the C function `printf()`.**
 
-This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).
+**This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).**
 
+​![](https://user-images.githubusercontent.com/105612348/178139744-dbfb10e7-caf5-4925-91d4-214299a837d6.jpg)
 
-![Flowchart](src="https://prnt.sc/uNQhoxARTcRn)
 
 ## C language standard functions used
 
 * ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``
 
-​
 
 
 (This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).)
 
-Variables format | Description
+Format specifier | Description
 --- | ---
-%c | used to print characters
-%s | used to print string
-%d, %i | used to print integers
+%c | Used to print characters.
+%s | Used to print string.
+%d, %i | Used to print integers.
+%R | Used to print Rot13'd string.
+%x | Used to print hexadecimal integer (lowercase).
+%X | Used to print hexadecimal integer (uppercase).
+
 
 ## Usage
 
@@ -54,7 +57,11 @@ int main()
 ---- | ----
 **[main.h](https://github.com/Donaldoo/holbertonschool-printf/blob/main/main.h)** | Header file conatins all the prototypes & the structure used in this project.
 **[_putchar](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_putchar.c)** | Function used to print only one character.
+**[_strlen.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_strlen.c)** | Function to find length of a string.
 **[print_functions.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/print_functions.c)** | File containing functions to print variable format `char`, `string` & `int` using only `_putchar`.
+**[rot13.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/rot13.c)** | File contains function to encode a string to rot13.
+**[dec_to_binary.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/dec_to_binary.c)** | Function to convert decimal numbers to binary.
+**[dec_to_hexadecimal.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/dec_to_hexadecimal.c)** | Function to convert decimal numbers to hexadecimal (lowercase and uppercase).
 **[_printf.c](https://github.com/Donaldoo/holbertonschool-printf/blob/main/_printf.c)** | File contains structure initialised with values and checks format entered from stdio.
 
 #### Authors
