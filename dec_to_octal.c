@@ -46,7 +46,6 @@ int print_octal(va_list arg)
  * @arg: list of arguments
  * Return: i
  */
-
 int print_unsignedint(va_list arg)
 {
         unsigned int i = 1, len = 0;
@@ -57,8 +56,8 @@ int print_unsignedint(va_list arg)
 
         if (len == 0)
         {
-                _putchar('-');
-                len = len * (-1);
+                _putchar('+');
+                len = len * (1);
                 nr = len;
                 i += 1;
         }
