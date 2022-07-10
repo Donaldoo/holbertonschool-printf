@@ -4,7 +4,8 @@
 
 **This function is similar with [printf](https://man7.org/linux/man-pages/man3/printf.3.html).**
 
-​![](https://user-images.githubusercontent.com/105612348/178139744-dbfb10e7-caf5-4925-91d4-214299a837d6.jpg)
+
+![readmeimg](https://user-images.githubusercontent.com/105612348/178147502-ac822223-7776-4f8d-adf9-029d7616004a.png)
 
 
 ## C language standard functions used
