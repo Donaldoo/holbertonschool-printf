@@ -9,7 +9,7 @@
 
 ## C language standard functions used
 
-* ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``
+* ``typedef struct``,``va_start``, ``va_end``, ``va_copy``,``va_arg``,``_putchar``
 
 
 
