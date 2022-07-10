@@ -1,0 +1,42 @@
+#include "main.h"
+/**
+ * print_octal - function to convert decimal to octal
+ * @arg: list of arguments
+ * Return: length
+ */
+
+int print_octal(va_list arg)
+{
+	unsigned long int num = va_arg(arg, long int);
+	int decNum[100];
+	int index, j, length = 0;
+	char oct[] = "0123456789";
+	int dec[] = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+
+	if (num == 0)
+	{
+		_putchar('0');
+		length++;
+		return (length);
+	}
+
+	for (index = 0; num != 0; index++)
+	{
+		decNum[index] = num % 8;
+		num = num / 8;
+	}
+	index--;
+	for ( ; index >= 0; index--)
+	{
+		for (j = 0; j < 9; j++)
+		{
+			if (decNum[index] == dec[j])
+			{
+				_putchar(oct[j]);
+				length++;
+				break;
+			}
+		}
+	}
+	return (length);
+}
