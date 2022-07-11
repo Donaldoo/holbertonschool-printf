@@ -39,7 +39,7 @@ int print_string(va_list arg)
  * print_int - Function to print numbers
  * @arg: list of arguments
  * Return: i
- *
+ */
 
 int print_int(va_list arg)
 {
@@ -63,45 +63,6 @@ int print_int(va_list arg)
 		len++;
 	}
 	_recursion_int(i);
-	return (len);
-}*/
-
-int print_int(va_list arg)
-{
-	int num = va_arg(arg, int);
-	unsigned int uNum;
-	int i = 0, len = 0;
-	char store[11];
-
-	if (num < 0)
-	{
-		_putchar('-');
-		len++;
-		uNum = -num;
-	}
-	else
-		uNum = num;
-	if (uNum == 0)
-	{
-		_putchar('0');
-		len++;
-	}
-	if (uNum > 0)
-	{
-		while (uNum != 0)
-		{
-			store[i] = (uNum % 10) + '0';
-			uNum /= 10;
-			i++;
-		}
-		i -= 1;
-		while (i >= 0)
-		{
-			_putchar(store[i]);
-			len++;
-			i--;
-		}
-	}
 	return (len);
 }
 
