@@ -43,7 +43,7 @@ int print_string(va_list arg)
 
 int print_int(va_list arg)
 {
-	int i, len = 0;
+	int i = 0, len = 0;
 	unsigned int nr = 0;
 
 	nr = va_arg(arg, int);
@@ -68,14 +68,14 @@ int print_int(va_list arg)
 
 /**
  * _recursion_int - function to print an int
- * @n: intiger
+ * @i: integer
  */
-void _recursion_int(int n)
+void _recursion_int(int i)
 {
-	unsigned int i;
+	unsigned int n;
 
-	i = n;
-	if (i / 10)
-		_recursion_int(i / 10);
-	_putchar(i % 10 + '0');
+	n = i;
+	if (n / 10)
+		_recursion_int(n / 10);
+	_putchar(n % 10 + '0');
 }
