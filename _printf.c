@@ -29,12 +29,7 @@ int _printf(const char *format, ...)
 			for (j = 0; print[j].symbol; j++)
 			{
 				if (format[i + 1] == *print[j].symbol)
-				{
-					len = len + print[j].f(arg);
-					i++;
-					flag = 1;
-					break;
-				}
+					len = len + print[j].f(arg), i++, flag = 1;
 			}
 			if (flag == 0)
 				_putchar(format[i]), len += 1;
@@ -46,11 +41,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			len += 1;
-			continue;
-		}
+			_putchar(format[i]), len += 1;
 		i++;
 	}
 	va_end(arg);
