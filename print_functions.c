@@ -38,7 +38,7 @@ int print_string(va_list arg)
 /**
  * print_int - Function to print numbers
  * @arg: list of arguments
- * Return: i
+ * Return: length
  */
 
 int print_int(va_list arg)
@@ -68,7 +68,7 @@ int print_int(va_list arg)
 
 /**
  * _recursion_int - function to print an int
- * @i: intiger
+ * @n: intiger
  */
 void _recursion_int(int n)
 {
