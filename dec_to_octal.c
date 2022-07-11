@@ -37,7 +37,7 @@ int print_octal(va_list arg)
  * @arg: list of arguments
  * Return: i
  */
-int print_unsignedint(va_list arg)
+int print_u(va_list arg)
 {
 	unsigned int i, len = 0;
 	unsigned int nr = 0;

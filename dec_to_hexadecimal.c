@@ -5,7 +5,7 @@
  * Return: length
  */
 
-int print_hexadecimal(va_list arg)
+int print_hex(va_list arg)
 {
 	unsigned long int num = va_arg(arg, long int);
 	int hexNum[50];
