@@ -50,23 +50,23 @@ int print_octal(va_list arg)
  */
 int print_unsignedint(va_list arg)
 {
-	unsigned int i = 1, len = 0;
+	unsigned int i, len = 0;
 	unsigned int nr = 0;
 	
 	nr = va_arg(arg, unsigned int);
-	len = nr;
+	i = nr;
 	
-	if (len == 0)
+	if (i == 0)
 	{
 		_putchar('0');
-		i++;
+		len++;
 	}
 	
 	while (nr > 9)
 	{
 		nr = nr / 10;
-		i++;
+		len++;
 	}
-	_recursion_int(len);
-	return (i);
+	_recursion_int(i);
+	return (len);
 }
