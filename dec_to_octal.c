@@ -41,16 +41,16 @@ int print_unsignedint(va_list arg)
 {
 	unsigned int i, len = 0;
 	unsigned int nr = 0;
-	
+
 	nr = va_arg(arg, unsigned int);
 	i = nr;
-	
+
 	if (i == 0)
 	{
 		_putchar('0');
 		len++;
 	}
-	
+
 	while (nr > 9)
 	{
 		nr = nr / 10;

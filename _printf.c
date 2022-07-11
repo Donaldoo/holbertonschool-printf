@@ -10,12 +10,12 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	int i, j, flag, len = 0;
+	int i, j, flag = 0, len = 0;
 
 	print_t print[] = {
 		{"c", print_char}, {"s", print_string}, {"d", print_int}, {"i", print_int},
-		{"R", print_rot13}, {"b", dec_binary}, {"o", print_octal}, {"u", print_unsignedint}, {"x", print_hexadecimal},
-		{"X", print_Upper_hex}, {"r", rev_str}, {NULL, NULL}
+		{"R", print_rot13}, {"b", dec_binary}, {"u", print_unsignedint}, {"x", print_hexadecimal},
+		{"X", print_Upper_hex}, {"r", rev_str}, {"o", print_octal}, {NULL, NULL}
 	};
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
@@ -25,8 +25,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			j = 0; flag = 0;
-			while (print[j].symbol)
+			j = 0;
+			while (print[j].symbol != NULL)
 			{
 				if (format[i + 1] == *print[j].symbol)
 					len = len + print[j].f(arg), i++, flag = 1;
