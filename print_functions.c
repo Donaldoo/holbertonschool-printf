@@ -34,48 +34,6 @@ int print_string(va_list arg)
 
 	return (i);
 }
-/*
-int print_int(va_list arg)
-{
-	int n = va_arg(arg, int);
-	int i = 0, len = 0;
-	char store[11];
-	unsigned int un;
-
-	if (n < 0)
-	{
-		_putchar('-');
-		len++;
-		un = -n;
-	}
-	else un = n;
-
-	if (un == 0)
-	{
-		_putchar('0');
-		len++;
-	}
-
-	if (un > 0)
-	{
-		while (un != 0)
-		{
-			store[i] = (un % 10) + '0';
-			un /= 10;
-			i++;
-		}
-		i -= 1;
-		while (i >= 0)
-		{
-			_putchar(store[i]);
-			i--;
-			len++;
-		}
-	}
-	return (len);
-}
-*/
-
 
 /**
  * print_int - Function to print numbers
