@@ -33,7 +33,7 @@ int print_octal(va_list arg)
 }
 
 /**
- * print_unsignedint - Function to print positive numbers
+ * print_u - Function to print positive numbers
  * @arg: list of arguments
  * Return: i
  */

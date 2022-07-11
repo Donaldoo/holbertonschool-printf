@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_hexadecimal - function to convert decimal to lowercase hexadecimal
+ * print_hex - function to convert decimal to lowercase hexadecimal
  * @arg: list of arguments
  * Return: length
  */
