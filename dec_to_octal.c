@@ -39,8 +39,8 @@ int print_octal(va_list arg)
  */
 int print_u(va_list arg)
 {
-	unsigned int i = 0, len = 0;
-	unsigned int nr = 0;
+	unsigned int len = 0, i;
+	unsigned int nr;
 
 	nr = va_arg(arg, unsigned int);
 	i = nr;

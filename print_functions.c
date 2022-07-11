@@ -34,7 +34,7 @@ int print_string(va_list arg)
 
 	return (i);
 }
-
+/*
 int print_int(va_list arg)
 {
 	int n = va_arg(arg, int);
@@ -74,18 +74,18 @@ int print_int(va_list arg)
 	}
 	return (len);
 }
-
+*/
 
 
 /**
  * print_int - Function to print numbers
  * @arg: list of arguments
  * Return: length
- *
+ */
 
 int print_int(va_list arg)
 {
-	int i = 0, len = 0;
+	int i = 0, len = 1;
 	unsigned int nr = 0;
 
 	nr = va_arg(arg, int);
@@ -106,7 +106,7 @@ int print_int(va_list arg)
 	}
 	_recursion_int(i);
 	return (len);
-}*/
+}
 
 /**
  * _recursion_int - function to print an int
