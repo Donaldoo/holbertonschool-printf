@@ -3,7 +3,6 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
-#include <limits.h>
 
 /**
  * Prototypes of cunctions used in this project
